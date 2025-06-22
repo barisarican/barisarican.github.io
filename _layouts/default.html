@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .side-banner {
+      background-image: url('/assets/images/decorative-side.png');
+      background-repeat: repeat-y;
+      background-position: center;
+      background-size: contain;
+      width: 300px;
+    }
+  </style>
+</head>
+<body class="bg-[#feeeed] text-gray-800 font-sans">
+  <div class="flex min-h-screen">
+    <div class="hidden lg:block side-banner"></div>
+    <main class="flex-1 max-w-3xl mx-auto p-4">
+      {{ content }}
+    </main>
+
+    <div class="hidden lg:block side-banner"></div>
+  </div>
+</body>
+</html>
